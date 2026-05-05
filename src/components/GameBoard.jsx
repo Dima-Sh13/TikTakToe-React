@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 const initialGameBoard= [
     [null,null,null],
     [null,null,null],
@@ -5,6 +7,14 @@ const initialGameBoard= [
 ];
 
 export default function GameBoard() {
+
+    const [isPlayed, setIsPlayed] = useState();
+    
+    function handlePlay() {
+        return setIsPlayed
+
+    }
+
     return(
         <ol id="game-board">
             {initialGameBoard.map((row, rowIndex) => (
