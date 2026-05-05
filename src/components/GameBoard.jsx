@@ -22,7 +22,7 @@ export default function GameBoard() {
                     <ol>
                         {row.map((playerSymbol, colIndex) => (
                             <li key={colIndex}>
-                                <button>{playerSymbol}</button>
+                                <button onClick={handlePlay}>{playerSymbol}</button>
                             </li>
                         ))}
                     </ol>
