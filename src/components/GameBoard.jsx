@@ -8,10 +8,15 @@ const initialGameBoard= [
 
 export default function GameBoard() {
 
-    const [isPlayed, setIsPlayed] = useState();
+    const [gameBoard, setGameBoard] = useState(initialGameBoard);
     
-    function handlePlay() {
-        return setIsPlayed
+    function handlePlay(rowIndex, colIndex) {
+        setGameBoard((previousGameBoard) => {
+            const updatedBoard = [...previousGameBoard.map(innerArray => [...innerArray])]
+            previousGameBoard[rowIndex][colIndex] = 'X';
+            return p
+
+        });
 
     }
 
