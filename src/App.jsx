@@ -1,15 +1,18 @@
 import {useState} from 'react';
 
+import Log from './components/Log';
 import Player from "./components/Player"
 import GameBoard from "./components/GameBoard"
+import Log from './components/Log';
 
 
 function App() {
-
+  
   const [activePlayer, setActivePlayer] = useState('X');
 
   function handlePlayer() {
     setActivePlayer((curryActivePlayer) => curryActivePlayer === 'X' ? 'O' : 'X')
+  
   }
   
 
@@ -22,7 +25,7 @@ function App() {
 
       <GameBoard onSelectSquare={handlePlayer} activePlayerSymbol={activePlayer}  />
     </div>
-
+    <Log />
   </main>
    
   
