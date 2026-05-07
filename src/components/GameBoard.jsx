@@ -14,20 +14,13 @@ export default function GameBoard() {
         setGameBoard((previousGameBoard) => {
             const updatedBoard = [...previousGameBoard.map(innerArray => [...innerArray])]
             previousGameBoard[rowIndex][colIndex] = 'X';
-            return p
+            return previousGameBoard;
 
         });
 
     }
-    function handlePlyay(rowIndex, colIndex) {
-        setGameBoard((previousGameBoard) => {
-            const updatedBoard = [...previousGameBoard.map(innerArray => [...innerArray])]
-            previousGameBoard[rowIndex][colIndex] = 'X';
-            return p
+    
 
-        });
-
-    }
 
     return(
         <ol id="game-board">
