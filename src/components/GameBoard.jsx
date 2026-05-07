@@ -12,9 +12,9 @@ export default function GameBoard() {
     
     function handlePlay(rowIndex, colIndex) {
         setGameBoard((previousGameBoard) => {
-            const updatedBoard = [...previousGameBoard.map(innerArray => [...innerArray])]
-            previousGameBoard[rowIndex][colIndex] = 'X';
-            return previousGameBoard;
+            const updatedBoard = [...previousGameBoard.map(innerArray => [...innerArray])];
+            updatedBoard[rowIndex][colIndex] = 'X';
+            return updatedBoard;
 
         });
 
@@ -24,12 +24,12 @@ export default function GameBoard() {
 
     return(
         <ol id="game-board">
-            {initialGameBoard.map((row, rowIndex) => (
+            {gameBoard.map((row, rowIndex) => (
                 <li key={rowIndex}>
                     <ol>
                         {row.map((playerSymbol, colIndex) => (
                             <li key={colIndex}>
-                                <button onClick={handlePlay}>{playerSymbol}</button>
+                                <button onClick={() => handlePlay(rowIndex, colIndex)}>{playerSymbol}</button>
                             </li>
                         ))}
                     </ol>
