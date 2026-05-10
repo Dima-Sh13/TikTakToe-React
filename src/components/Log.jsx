@@ -1,4 +1,6 @@
-export default function Log() {
+const movesList = []
+
+export default function Log({ moves }) {
     
     
     
