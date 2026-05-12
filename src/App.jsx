@@ -7,7 +7,7 @@ import GameBoard from "./components/GameBoard"
 function derivedActivePlayer(gameTurns){
    let currentPlayer= 'X';
 
-      if (prevTurns.length > 0 && prevTurns[0].player === 'X') {
+      if (gameTurns.length > 0 && gameTurns[0].player === 'X') {
         currentPlayer = 'O'
       }
 
@@ -17,8 +17,8 @@ function derivedActivePlayer(gameTurns){
 
 function App() {
   const[gameTurns, setGameTurns] = useState([]);
-  
 
+  
   
   
   const activePlayer = derivedActivePlayer(gameTurns)
@@ -28,7 +28,7 @@ function App() {
     function handlePlayer(rowIndex, colIndex) {
     
       setGameTurns(prevTurns => {
-      const currentPlayer = derivedActivePlayer(prevTurns);
+      const currentPlayer = derivedActivePlayer(prevTurns)
       const updatedTurns = [{ square: { row:rowIndex, col: colIndex }, player: currentPlayer},...prevTurns];
 
       return updatedTurns
