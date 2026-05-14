@@ -15,6 +15,15 @@ function derivedActivePlayer(gameTurns){
 
       return currentPlayer
 }
+function derivedActivePlayer(gameTurns){
+   let currentPlayer= 'X';
+
+      if (gameTurns.length > 0 && gameTurns[0].player === 'X') {
+        currentPlayer = 'O'
+      }
+
+      return currentPlayer
+}
 
 
 function App() {
@@ -35,14 +44,7 @@ function App() {
 
       return updatedTurns
     });
-    function handlePlayer(rowIndex, colIndex) {
-    
-      setGameTurns(prevTurns => {
-      const currentPlayer = derivedActivePlayer(prevTurns)
-      const updatedTurns = [{ square: { row:rowIndex, col: colIndex }, player: currentPlayer},...prevTurns];
-
-      return updatedTurns
-    });
+   
   }
   
 
