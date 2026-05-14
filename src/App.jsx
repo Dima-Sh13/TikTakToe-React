@@ -35,6 +35,14 @@ function App() {
 
       return updatedTurns
     });
+    function handlePlayer(rowIndex, colIndex) {
+    
+      setGameTurns(prevTurns => {
+      const currentPlayer = derivedActivePlayer(prevTurns)
+      const updatedTurns = [{ square: { row:rowIndex, col: colIndex }, player: currentPlayer},...prevTurns];
+
+      return updatedTurns
+    });
   }
   
 
