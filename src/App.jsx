@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 import Log from './components/Log';
 import Player from "./components/Player"
@@ -6,7 +6,7 @@ import GameBoard from "./components/GameBoard"
 import { WINNING_COMBINATIONS } from './winning-combinatios';
 
 
-function derivedActivePlayer(gameTurns){
+function derivedActivePlayer( gameTurns ){
    let currentPlayer= 'X';
 
       if (gameTurns.length > 0 && gameTurns[0].player === 'X') {
