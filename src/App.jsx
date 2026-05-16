@@ -19,23 +19,29 @@ function derivedActivePlayer( gameTurns ){
 
 
 function App() {
-  const[gameTurns, setGameTurns] = useState([]);
-
+  const [gameTurns, setGameTurns] = useState([]);
+  
   
   
   
   const activePlayer = derivedActivePlayer(gameTurns)
   
- 
- 
-    function handlePlayer(rowIndex, colIndex) {
-    
-      setGameTurns(prevTurns => {
-      const currentPlayer = derivedActivePlayer(prevTurns)
-      const updatedTurns = [{ square: { row:rowIndex, col: colIndex }, player: currentPlayer},...prevTurns];
+  for (const combination of WINNING_COMBINATIONS) {
+    const firstSquareSymbol
+    const secondSquareSymbol
+    const thirdSquareSymbol
 
-      return updatedTurns
-    });
+  }
+ 
+ 
+  function handlePlayer(rowIndex, colIndex) {
+  
+    setGameTurns(prevTurns => {
+    const currentPlayer = derivedActivePlayer(prevTurns)
+    const updatedTurns = [{ square: { row:rowIndex, col: colIndex }, player: currentPlayer},...prevTurns];
+
+    return updatedTurns
+  });
    
   }
   
