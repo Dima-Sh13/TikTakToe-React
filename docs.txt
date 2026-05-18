@@ -249,3 +249,37 @@ If you cloned array contains nested arrays or objects as elements or if your obj
 You still have the old pointers, pointing to the old nested arrays/ objects!
 
 You'd have to manually clone every layer that you plan on working with. If you don't plan on changing these nested arrays or objects though, you don't need to clone them.
+
+
+var hobbies = ['Sports', 'Cooking']
+var copiedHobbies = [...hobbies]
+
+Here, you also create a new array (manually, by using []) and you then use the spread operator (...) to "pull all elements of the old array out" and add them to the new array.
+For objects
+1) Object.assign()
+
+You can use the Object.assign() syntax which is explained in greater detail here.
+
+var person = { name: 'Max' }
+var copiedPerson = Object.assign({}, person)
+
+This syntax creates a new object (the {} part) and assigns all properties of the old object (the second argument) to that newly created one. This creates a copy.
+2)
+
+Just as with arrays, you can also use the spread operator on objects.
+
+var person = { name: 'Max' }
+var copiedPerson = { ...person }
+
+This will also create a new object (because you used { }) and will then pull all properties of person out of it, into the brand-new objects.
+Deep Clones?
+
+Now you know how to clone arrays and objects.
+
+Here's one super-important thing to note though: You're not creating deep clones with either approach!
+
+If you cloned array contains nested arrays or objects as elements or if your object contains properties that hold arrays or other objects, then these nested arrays and objects will not have been cloned!
+
+You still have the old pointers, pointing to the old nested arrays/ objects!
+
+You'd have to manually clone every layer that you plan on working with. If you don't plan on changing these nested arrays or objects though, you don't need to clone them.
