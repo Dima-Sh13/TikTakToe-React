@@ -5,6 +5,21 @@ const initialGameBoard= [
     [null,null,null],
     [null,null,null]
 ];
+const initialGameBoard= [
+    [null,null,null],
+    [null,null,null],
+    [null,null,null]
+];
+const initialGameBoard= [
+    [null,null,null],
+    [null,null,null],
+    [null,null,null]
+];
+const initialGameBoard= [
+    [null,null,null],
+    [null,null,null],
+    [null,null,null]
+];
 
 export default function GameBoard({ onSelectSquare, turns }) {
     let gameBoard = initialGameBoard;
