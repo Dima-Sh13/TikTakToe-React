@@ -4,6 +4,7 @@ import Log from './components/Log';
 import Player from "./components/Player"
 import GameBoard from "./components/GameBoard"
 import { WINNING_COMBINATIONS } from './winning-combinatios';
+import ScoreTable from './components/ScoreTable';
 
 
 function derivedActivePlayer( gameTurns ){
@@ -56,6 +57,8 @@ function App() {
       <GameBoard onSelectSquare={handlePlayer} activePlayerSymbol={activePlayer} turns={gameTurns} />
     </div>
     <Log moves={gameTurns} />
+    <ScoreTable player1= {handlePlayer} />
+    
   </main>
    
   
