@@ -8,6 +8,18 @@ export default function Log({ moves }) {
 
         
     }
+    function playerNameNormalizer(moves) {
+        return console.log("player" + moves)
+
+
+        
+    }
+    function playerNameNormalizer(moves) {
+        return console.log("player" + moves)
+
+
+        
+    }
     
     
     return(
